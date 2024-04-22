@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;        
+    }
+    .submit {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;        
+    }
+</style>
+
+    <div class='container'>
+        <form method="post">
+            {% csrf_token %}
+    
+            <table>
+                {{ login_form.as_table }}
+            </table>
+    
+            <div class='submit'>
+                <input type="submit" value="Entrar">
+            </div>    
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .form {
+        margin-top: 20px;       
+    }
+
+    .table {
+        margin: auto;       
+    }
+
+    .submit {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+    <form class='form' method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <table class='table'>
+            {{ form.as_table }} 
+        </table>
+        <div class='submit'>
+            <input type="submit" value="Cadastrar" class="btn btn-primary">
+        </div>
+   
+    </form>
+{% endblock content %}
