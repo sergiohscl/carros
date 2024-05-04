@@ -87,10 +87,10 @@ WSGI_APPLICATION = "app.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':  'localhost',
+        'NAME':  'carrodb',
         'USER': 'postgres',
         'PASSWORD': 'admin13$',
-        'HOST': 'carrodb',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
